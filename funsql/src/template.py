@@ -6,6 +6,7 @@ __all__ = ["readTemplates"]
 
 import re
 from importlib.resources import files
+from .pghook import Hook
 
 red = "\x1b[31m{}\x1b[0m".format
 blue= "\x1b[34m{}\x1b[0m".format
@@ -41,6 +42,13 @@ class setFormat(str):
 class setQueries(str):
     def __init__(self,q):
         self.q = q    
+
+    def __call__(self):
+        return Hook().get(self.q)
+
+    def __add__(self,other):
+        return setQueries(self.q +"\n"+ other)
+
     def __repr__(self):
         ss = self.q
         # color keywords

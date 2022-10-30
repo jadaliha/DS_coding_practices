@@ -1,0 +1,8 @@
+
+{
+    "host"      : "psql-mock-database-cloud.postgres.database.azure.com",
+    "port"      : "5432",
+    "user"      : "nxhbvewxsaijdisfftwjgpuw@psql-mock-database-cloud",
+    "password"  : "aexcrtmmacdnrmpsomnnsvov",
+    "database"  : "booking1666875447372qmebziyvxnskbwrb"
+}
