@@ -1,5 +1,7 @@
 import psycopg2
 from pandas import DataFrame
+import logging
+log = logging.getLogger(__name__)
 
 __all__ = ['Hook']
 def singleton(cls):
@@ -32,6 +34,7 @@ class Hook():
             self.con = psycopg2.connect(**self.__conn_param)
             cur = self.con.cursor()
         cur.execute("set search_path to '{}';".format(self.schema))
+        log.info(f"running this query:\n{q}\n")
         cur.execute(q)
         self.con.commit()
         return cur
@@ -50,4 +53,5 @@ class Hook():
         resoverall = self.cur(q)
         df = DataFrame(resoverall.fetchall())
         df.columns = [desc[0] for desc in resoverall.description]
+        log.debug(f"shape of the result is: {df.shape}")
         return df

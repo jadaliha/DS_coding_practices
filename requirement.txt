@@ -1,0 +1,3 @@
+git+https://github.com/h2oai/datatable.git
+rich
+dataclasses
