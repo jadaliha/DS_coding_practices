@@ -7,7 +7,7 @@ Use funsql to sent an email with data density and other info
 """
 
 __author__ = "Mahdi Jadaliha"
-__version__ = "0.2.0"
+__version__ = "0.1.0"
 __license__ = "MIT"
 
 
@@ -40,19 +40,9 @@ def prompt_input():
 
 if __name__ == "__main__":
     print("===Enviroment Values:======")
-    print(os.environ['PG_BASE'])
+    print(os.environ)
     print("=====Parsed Values:========")
     print(sys.argv)
     print("=====Prompts values:=======")
     prop_results = prompt_input()
     print(prop_results)
-
-
-
-
-import yagmail
-yag = yagmail.SMTP('ds.coding.practices@gmail.com', 'Welcome!@#1')
-contents = ['This is the body, and here is just text http://somedomain/image.png',
-            'You can find an audio file attached.', '/local/path/song.mp3']
-yag.send('jadaliha@gmail.com', 'subject', contents)
-
