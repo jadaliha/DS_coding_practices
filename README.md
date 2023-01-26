@@ -1,3 +1,4 @@
+
 # Clean code practices for data scientists
 
 “When I wrote this code, only God and I understood what I did. Now only God knows.”
@@ -62,8 +63,14 @@ languages)
 > 6. You may use `logging` module to record diagnostic information, while running the program. and define the level of severity and destination of the log seperatly for different part of the code, and change them for **production** and **development** without changing the code again.
 
 ### 5. Executable python and debugging
+<a href="https://colab.research.google.com/github/jadaliha/DS_coding_practices/blob/main/5_executable_python.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
->**Comming soon `2023/26/1`**
+> **Summary:**
+> 1. Jupyter Notebooks is a valuable tool but not suitable for production code
+> 2. You can use `sys` and `os` modules to pass arguments to the script
+> 3. `InquirerPy` is an excelent library to prompt for user input 
+> 4. Add `__main__.py` to your module to make itself independent script
+> 5. You may use `rich` library, along with `breakpoint()` to debug your code
 
 ### 6. Data Manupulation
 

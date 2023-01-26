@@ -39,8 +39,8 @@ def prompt_input():
 
 
 if __name__ == "__main__":
-    print("===Enviroment Values:======")
-    print(os.environ)
+    # print("===Enviroment Values:======")
+    # print(os.environ)
     print("=====Parsed Values:========")
     print(sys.argv)
     print("=====Prompts values:=======")
