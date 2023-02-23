@@ -72,15 +72,24 @@ languages)
 > 4. Add `__main__.py` to your module to make itself independent script
 > 5. You may use `rich` library, along with `breakpoint()` to debug your code
 
-### 6. Data Manupulation
+### 6. Data Manipulation Challenge
 
->**Comming soon `2023/9/2`**
+>**Challange**
+> 1.	We have transactions for an e-commerce website, and we need to identify users' spending decrease (soft attrition problem). 
+You can download data from: https://drive.google.com/file/d/1Q_ZU_IN-igiI16GKrz8FGqXgvLQmeEsD/view?usp=share_link.
+> 2.	The transaction table has the following columns: userid, transactionid, transactiontime, numberofitemspurchased, costperitem
+> 3.	Write your main.py file that gets input and output CSV file path as parameters 
+> 4.	Read the transaction table from the input file.
+> 5.	Clean up data removing duplicate data and userid = -1
+> 6.	Calculate the "aggregated_table" with each month's dollar value of transactions per user. (hint: what happens if a user does not have transactions in month X?)
+> 7.	Add a new column, "soft_attrition", to aggregated_table, which is "1" if the total amount of transactions in the next three months is less than 25% of the past three months; otherwise, it is "0".
+> 8.	The final output file should have the following columns: userid, month (in string format like 2021-10), soft_attrition
 
-### 7. Data Visualization
+Two solution to this challenge is provided Here: 
+[The first one is using `pandas` which is a very popular library for data manipulation and the code is very concise.](./6_exercise/solution_with_pandas.py)
+[and the second one is using `polars` module, which is a new library for data manipulation and it is very fast.](./6_exercise/solution_with_polars.py)
 
->**Comming soon `2023/25/2`**
-
-### 8. What is next?
+<!-- ### 8. What is next? -->
 
 
 
