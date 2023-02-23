@@ -86,7 +86,9 @@ You can download data from: https://drive.google.com/file/d/1Q_ZU_IN-igiI16GKrz8
 > 8.	The final output file should have the following columns: userid, month (in string format like 2021-10), soft_attrition
 
 Two solution to this challenge is provided Here: 
+
 [The first one is using `pandas` which is a very popular library for data manipulation and the code is very concise.](./6_exercise/solution_with_pandas.py)
+
 [and the second one is using `polars` module, which is a new library for data manipulation and it is very fast.](./6_exercise/solution_with_polars.py)
 
 <!-- ### 8. What is next? -->
